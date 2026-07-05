@@ -1,10 +1,10 @@
 # Catppuccinifier
 
-This is a small project that I created because I wanted to colorize my ascii art. The tool is built around the Catppuccin color palette - one of my favorites.
+This is a small project that I created because I wanted to colorize my ASCII art. The tool is built around the Catppuccin color palette - one of my favorites.
 
 ## What it does
 
-The Catppuccinifier colorizes your text documents by randomly assigning a color to each character. You can choose one out of the four [catppuccin themes](https://catppuccin.com/palette/) that will be used to colorize your text.
+The Catppuccinifier colorizes your text documents by randomly assigning a color to each character. You can choose one out of the four [Catppuccin themes](https://catppuccin.com/palette/) that will be used to colorize your text.
 
 If you want to use another color palette you can simply swap the hex codes of a specific color palette with the ones you desire in `lib/themes/theme_colors.rb`.
 
