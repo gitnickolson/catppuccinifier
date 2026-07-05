@@ -1,6 +1,6 @@
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 4.0.1
+  TargetRubyVersion: 4.0.3
 Style/Documentation:
   Enabled: false
   
