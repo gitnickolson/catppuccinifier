@@ -1,6 +1,6 @@
 # Catppuccinifier
 
-This is a small project that I created because I wanted to colorize my ascii art. The tool is built around the Catppuccin color palette - one of my favorites.
+This is a small project that I created because I wanted to colorize my ASCII art. The tool is built around the Catppuccin color palette - one of my favorites.
 
 ## What it does
 
