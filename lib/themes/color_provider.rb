@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Themes
-  class ThemeProvider
+  class ColorProvider
     include ThemeColors
 
     THEMES_MAPPING = {
@@ -11,8 +11,8 @@ module Themes
       'mocha' => MOCHA_THEME
     }.freeze
 
-    def initialize(theme_name:)
-      selected_colors = THEMES_MAPPING[theme_name]
+    def initialize(theme:)
+      selected_colors = THEMES_MAPPING[theme]
       @base_color = selected_colors[:base]
       @main_colors = selected_colors[:main]
     end
