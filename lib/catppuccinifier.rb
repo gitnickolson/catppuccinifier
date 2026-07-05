@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class Catppuccinifier
-  def initialize(theme_name: 'mocha')
+  def initialize(theme_name:)
     @theme_provider = Themes::ThemeProvider.new(theme_name:)
   end
 
-  def catppuccinify(filepath: './nick_spark.txt')
+  def catppuccinify(filepath:)
     colorized_content = ''
 
     content = File.read(filepath)

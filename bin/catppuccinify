@@ -7,5 +7,8 @@ loader = Zeitwerk::Loader.new
 loader.push_dir(File.expand_path('../lib', __dir__))
 loader.setup
 
-catppuccinifier = Catppuccinifier.new
-catppuccinifier.catppuccinify
+filepath = Utility::InputFetcher.fetch_filepath
+theme_name = Utility::InputFetcher.fetch_theme
+
+catppuccinifier = Catppuccinifier.new(theme_name:)
+catppuccinifier.catppuccinify(filepath:)
