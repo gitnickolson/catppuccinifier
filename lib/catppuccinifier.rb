@@ -6,14 +6,12 @@ class Catppuccinifier
   end
 
   def catppuccinify(filepath:)
-    colorized_content = ''
-
     content = File.read(filepath)
-    content.each_line do |line|
-      colorized_content += colorize_line(line)
+    colorized_lines = content.each_line.with_object([]) do |line, colorized_lines|
+      colorized_lines << colorize_line(line)
     end
 
-    puts colorized_content
+    colorized_lines.join
   end
 
   private
@@ -21,17 +19,15 @@ class Catppuccinifier
   attr_reader :color_provider
 
   def colorize_line(line)
-    colorized_line = ''
-    line.chars.each do |character|
-      hex_code = color_provider.random_color
-      colorized_character = colorize(character, hex_code)
-      colorized_line += colorized_character
+    colorized_characters = line.chars.each_with_object([]) do |character, colorized_characters|
+      colorized_characters << colorize_character(character)
     end
 
-    colorized_line
+    colorized_characters.join
   end
 
-  def colorize(character, hex_code)
+  def colorize_character(character)
+    hex_code = color_provider.random_color
     rgb_values = Utility::HexTranslator.hex_to_rgb_ansi_string(hex_code:)
 
     "\e[38;2;#{rgb_values}m#{character}\e[0m"
