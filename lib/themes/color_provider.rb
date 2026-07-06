@@ -12,19 +12,15 @@ module Themes
     }.freeze
 
     def initialize(theme:)
-      selected_colors = THEMES_MAPPING[theme]
-      @base_color = selected_colors[:base]
-      @main_colors = selected_colors[:main]
+      @selected_colors = THEMES_MAPPING[theme]
     end
 
-    attr_reader :base_color
-
     def random_color
-      main_colors.sample
+      selected_colors.sample
     end
 
     private
 
-    attr_reader :main_colors
+    attr_reader :selected_colors
   end
 end

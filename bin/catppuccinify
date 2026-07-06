@@ -11,4 +11,6 @@ filepath = Utility::InputFetcher.fetch_filepath
 theme = Utility::InputFetcher.fetch_theme
 
 catppuccinifier = Catppuccinifier.new(theme:)
-catppuccinifier.catppuccinify(filepath:)
+catppuccinified_content = catppuccinifier.catppuccinify(filepath:)
+
+puts catppuccinified_content
