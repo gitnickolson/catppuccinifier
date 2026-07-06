@@ -1,4 +1,4 @@
-# Catppuccinifier
+<h1 align="center">Catppuccinifier</h1>
 
 This is a small project that I created because I wanted to colorize my ASCII art. The tool is built around the Catppuccin color palette - one of my favorites.
 
@@ -55,6 +55,21 @@ Please choose a catppuccin theme:
 4. Mocha
 
 > 4
+```
+
+You can also use it by passing the filepath and the theme as CLI args
+
+```
+> bundle exec bin/catppuccinify ~/ascii_art/spark_collection.txt 4
+```
+
+The theme parameters can be passed as numerics or as their respective titles written out.
+
+That means that these are both valid
+
+```
+> bundle exec bin/catppuccinify ~/ascii_art/spark_collection.txt 2
+> bundle exec bin/catppuccinify ~/ascii_art/spark_collection.txt Frappe
 ```
 
 Example output
