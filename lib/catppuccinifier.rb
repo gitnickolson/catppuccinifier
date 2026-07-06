@@ -23,7 +23,7 @@ class Catppuccinifier
   def colorize_line(line)
     colorized_line = ''
     line.chars.each do |character|
-      hex_code = character == ' ' ? color_provider.base_color : color_provider.random_color
+      hex_code = color_provider.random_color
       colorized_character = colorize(character, hex_code)
       colorized_line += colorized_character
     end
@@ -33,6 +33,7 @@ class Catppuccinifier
 
   def colorize(character, hex_code)
     rgb_values = Utility::HexTranslator.hex_to_rgb_ansi_string(hex_code:)
+
     "\e[38;2;#{rgb_values}m#{character}\e[0m"
   end
 end
