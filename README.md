@@ -76,8 +76,8 @@ Example output
 ![Example output](colorized_spark_collection.png)
 
 
-## Adding Catppuccinifier to your zsh autocompletion
-Add the following line to your `.zshrc` configuration file (and don't forget to replace the example path with the actual path that leads to your Catppuccinifier directory)
+## Adding Catppuccinifier to your Zsh autocompletion
+Add the following line to your `.zshrc` configuration file (and replace the example path with the actual path that leads to your Catppuccinifier directory)
 
 ```
 source ~/path/to/directory/catppuccinifier/plugin.zsh
