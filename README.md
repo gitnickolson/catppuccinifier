@@ -82,3 +82,5 @@ Add the following line to your `.zshrc` configuration file (and replace the exam
 ```
 source ~/path/to/directory/catppuccinifier/plugin.zsh
 ```
+
+You will then be able to run the script by just calling `catppuccinify` from any directory. The filepath and theme parameters are also able to be autocompleted.
