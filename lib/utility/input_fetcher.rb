@@ -20,6 +20,8 @@ module Utility
         return theme unless theme.nil?
 
         prompt_for_theme
+      rescue Interrupt
+        puts 'Execution interrupted'
       end
 
       private
